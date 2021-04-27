@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    
+    <style>
+      .pageFooter{
+        background-color: lightsteelblue;
+      }
+    </style>
+    <title>music world</title>
+  </head>
+  <body>
+    
+    
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+        <div class= 'container-fluid'>
+            <a class='navbar-brand' href="#">Music World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="favourite.html">Favourite album</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="worst.html">Worst album</a>
+                </li>
+                
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <main class="container">
+
+      <div class='row' id="albums">
+
+      </div>
+
+
+
+    </main>
+
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and linked to EduFlow by the end of the day.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided.
+- To test the page, just open it with your default browser.
+- Use Bootstrap4.6 classes to render the page.
+- Use containers, rows and cols in order to achieve a great responsive layout.
+
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd have a short biography section of yourself, and the top albums of your life, 
+the worst album you ever listened to and everything related to the music you love.
+
+NOTE:
+Most of the times, even the most expert of designers need inspiration.
+Spend 30 minutes surfing the web and searching the best way of rapresenting the album you love the most.
+Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    <script> 
+    window.onload = function () {
+      const albums = document.getElementById("albums")
+      for (let i = 0; i < 30; i ++){
+          albums.innerHTML += `
+          <div class="col-6 col-md-3 col-lg-2 mb-3 "><div class="card">
+            <img src="metalica.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Metalica - self destruct</h5>
+            <p class="card-text">Album from Metalica </p>
+            <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+            </div>
+          </div>`
+      }
+  }
+  
+  
+  function createAlbum() {
+            const albums = document.getElementById("albums")
+            const toBeAdded = document.createElement("div")
+            toBeAdded.classList.add("col-6")
+            toBeAdded.classList.add("col-md-3")
+            toBeAdded.classList.add("col-lg-2")
+            toBeAdded.innerText = "Example Album"
+            albums.appendChild(toBeAdded)
+        }
+  </script>
+  <footer class= "pageFooter fixed-bottom">
+		&copy; 2021 Hasham Zafar - Last Modified:<time datetime="27-04-2021T14:00+01:00 ">27-04-2021 at 14:10 (Central European Summer Time)</time> 
+		
+	</footer>
+
+  </body>
+</html>
